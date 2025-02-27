@@ -2167,7 +2167,7 @@ class AttentionLayers(Module):
         # whether unet or not
 
         self.unet_skips = unet_skips
-        num_skips = self.depth // len_default_block
+        num_skips = self.depth // 2
 
         assert not (unet_skips and num_skips == 0), 'must have depth of at least 2 for unet skip connections'
 
